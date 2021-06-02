@@ -2,6 +2,8 @@
 A simple program that watches for Phasmophobia camera pictures in the game folder and copies them to a folder of your choosing for safe keeping and later review.
 
 ### Directions
+[Install program](https://jupiter.waggz.rocks/phasmoapp/) (Note: Windows will complain about running this program, it is not signed but the source code is here for you to compile and run for yourself if you wish!)
+
 Upon program startup it will load the previously configured directories. If not found, it will try to determine the Phasmophobia installation directory via the registry's uninstaller installation directory value, and the "Pictures" windows library folder as defaults. 
 Choose your directories and hit 'Start'. The program minimizes to the system tray and will check for *.png files in the install directory that are saved, and then copy those files over to the save directory with a timestamped file name. 
 
