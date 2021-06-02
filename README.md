@@ -2,8 +2,11 @@
 # PhasmoScreenshotSaver
 A simple program that watches for Phasmophobia camera pictures in the game folder and copies them to a folder of your choosing for safe keeping and later review.
 
-![Screenshot of early version](https://i.imgur.com/Rke58UB.png)
 *sample screenshot of early version*
+
+![Screenshot of early version](https://i.imgur.com/Rke58UB.png)
+
+
 
 ### Directions
 [Install program](https://jupiter.waggz.rocks/phasmoapp/) (Note: Windows will complain about running this program, it is not signed but the source code is here for you to compile and run for yourself if you wish!)
