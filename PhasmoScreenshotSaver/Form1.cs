@@ -203,5 +203,19 @@ namespace PhasmoScreenshotSaver
         {
             System.Diagnostics.Process.Start("https://github.com/waggz81/PhasmoScreenshotSaver");
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            RegistryKey registryKey = Registry.CurrentUser.OpenSubKey
+            ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            if (checkBox1.Checked)
+            {
+                registryKey.SetValue("Phasmophobia Screenshot Saver", Application.ExecutablePath);
+            }
+            else
+            {
+                registryKey.DeleteValue("Phasmophobia Screenshot Saver");
+            }
+        }
     }
 }
