@@ -58,11 +58,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(365, 177);
+            this.button1.Location = new System.Drawing.Point(336, 177);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(104, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
+            this.button1.Text = "Save && Launch";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -226,6 +226,7 @@
             this.Name = "Form1";
             this.Text = "Phasmophobia Screenshot Saver";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);

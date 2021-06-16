@@ -51,7 +51,10 @@ namespace PhasmoScreenshotSaver
                 textBox2.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             }
 
-
+            if (Settings.RunOnStartup)
+            {
+                checkBox1.Checked = true;
+            }
 
         }
        
@@ -124,6 +127,12 @@ namespace PhasmoScreenshotSaver
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Launch();
+
+        }
+
+        private void Launch ()
+        {
             Settings.InstallDir = textBox1.Text;
             Settings.SaveDir = textBox2.Text;
             Settings.Save();
@@ -133,7 +142,6 @@ namespace PhasmoScreenshotSaver
             Hide();
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(50000);
-
         }
 
         delegate void SetTextCallback(string text);
@@ -211,10 +219,20 @@ namespace PhasmoScreenshotSaver
             if (checkBox1.Checked)
             {
                 registryKey.SetValue("Phasmophobia Screenshot Saver", Application.ExecutablePath);
+                Settings.RunOnStartup = true;
             }
             else
             {
                 registryKey.DeleteValue("Phasmophobia Screenshot Saver");
+                Settings.RunOnStartup = false;
+            }
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            if (Settings.RunOnStartup)
+            {
+                Launch();
             }
         }
     }
