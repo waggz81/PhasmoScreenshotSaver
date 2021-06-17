@@ -16,9 +16,9 @@ Choose your directories and hit 'Start'. The program minimizes to the system tra
 
 ### TODO
 
- - [ ] Add option for windows startup
+ - [x] Add option for windows startup
  - [ ] Add options for removing old files either by age or number or both
- - [ ] Expand options to include a choice for filter to make the program more useful outside of this nice usage
+ - [ ] Expand options to include a choice for filter to make the program more useful outside of this niche usage
 
 This program is only tested in Windows 10. Open an issue if you find one or have further suggestions not included in the TODO.
 
